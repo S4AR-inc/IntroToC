@@ -18,3 +18,9 @@ bool CanContain(Size2D  container, Size2D  content)
 {
 	return container.Width >= content.Width && container.Height >= content.Height;
 }
+
+void InitializeRect(Rect* rect, double width, double height)
+{
+	rect->Width = width;
+	rect->Height = height;
+}

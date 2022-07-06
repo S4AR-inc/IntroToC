@@ -12,4 +12,4 @@ typedef struct Size2D Rect;
 double Area(Size2D size);
 Size2D Largest(Size2D  first, Size2D  second);
 bool CanContain(Size2D  container, Size2D  content);
-
+void InitializeRect(Rect* rect, double width, double height);

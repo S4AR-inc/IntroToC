@@ -9,7 +9,8 @@ int main()
 	Point2D farthest = FarthestFromOrigin(first, second);
 	printf("farthest: X: %f, Y: %f\n", farthest.X, farthest.Y);
 
-	Rect rect1 = { 5, 5 };
+	Rect rect1;
+	InitializeRect(&rect1, 5, 5);
 	printf("area: %f\n", Area(rect1));
 	Rect rect2 = { 7, 4 };
 	Rect largest = Largest(rect1, rect2);
