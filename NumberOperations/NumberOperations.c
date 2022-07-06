@@ -12,6 +12,12 @@ void add(int* pNum, int incBy) {
     *pNum += incBy;
 }
 
+void swap(int* first, int* second) {
+    int temp = *first;
+    *first = *second;
+    *second = temp;
+}
+
 int main()
 {
     for (int i = 1; i < 100; i++)
@@ -23,4 +29,9 @@ int main()
     printf("%d + 60 = ", number);
     add(&number, 60);
     printf("%d\n", number);
+
+    int toSwap = 42;
+    printf("%d swaped with %d is ", number, toSwap);
+    swap(&number, &toSwap);
+    printf("%d, %d", number, toSwap);
 }
