@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EmpireTron", "EmpireTron\EmpireTron.vcxproj", "{6FA0D213-A9BB-40A8-87A0-4A80DBAA09BF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fibonachi", "Fibonachi\Fibonachi.vcxproj", "{C3673555-54EA-46E8-AC13-3171CD9E12D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{6FA0D213-A9BB-40A8-87A0-4A80DBAA09BF}.Release|x64.Build.0 = Release|x64
 		{6FA0D213-A9BB-40A8-87A0-4A80DBAA09BF}.Release|x86.ActiveCfg = Release|Win32
 		{6FA0D213-A9BB-40A8-87A0-4A80DBAA09BF}.Release|x86.Build.0 = Release|Win32
+		{C3673555-54EA-46E8-AC13-3171CD9E12D5}.Debug|x64.ActiveCfg = Debug|x64
+		{C3673555-54EA-46E8-AC13-3171CD9E12D5}.Debug|x64.Build.0 = Debug|x64
+		{C3673555-54EA-46E8-AC13-3171CD9E12D5}.Debug|x86.ActiveCfg = Debug|Win32
+		{C3673555-54EA-46E8-AC13-3171CD9E12D5}.Debug|x86.Build.0 = Debug|Win32
+		{C3673555-54EA-46E8-AC13-3171CD9E12D5}.Release|x64.ActiveCfg = Release|x64
+		{C3673555-54EA-46E8-AC13-3171CD9E12D5}.Release|x64.Build.0 = Release|x64
+		{C3673555-54EA-46E8-AC13-3171CD9E12D5}.Release|x86.ActiveCfg = Release|Win32
+		{C3673555-54EA-46E8-AC13-3171CD9E12D5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
