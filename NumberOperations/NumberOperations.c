@@ -18,6 +18,13 @@ void swap(int* first, int* second) {
     *second = temp;
 }
 
+void printArr(int* array, int length) {
+    for (int i = 0; i < length; i++)
+    {
+        printf("%d ", array[i]);
+    }
+}
+
 int main()
 {
     for (int i = 1; i < 100; i++)
@@ -34,4 +41,8 @@ int main()
     printf("%d swaped with %d is ", number, toSwap);
     swap(&number, &toSwap);
     printf("%d, %d", number, toSwap);
+    
+    printf("\n");
+    int arr[10] = { 0, 1, 2, 3, 4, 5, 7, 8, 9, 10 };
+    printArr(&arr, 10);
 }
