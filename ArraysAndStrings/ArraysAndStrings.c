@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 struct Array {
 	int length;
@@ -13,7 +14,18 @@ void ArrayCopy(Array src, char* dst) {
 	}
 }
 
-
+bool ArrayCompare(Array first, Array second) {
+	if (first.length != second.length) {
+		return false;
+	}
+	for (int i = 0; i < first.length; i++)
+	{
+		if (first.array[i] != second.array[i]) {
+			return false;
+		}
+	}
+	return true;
+}
 
 int main()
 {
@@ -22,4 +34,7 @@ int main()
 	printf("Source: %s ", copySource.array);
 	ArrayCopy(copySource, copyDestination, 17);
 	printf("Destination: %s\n", copyDestination);
+
+	Array compare = { 17, copyDestination };
+	printf("%s == %s ? %s", copySource.array, compare.array, ArrayCompare(copySource, compare) ? "true" : "false");
 }
