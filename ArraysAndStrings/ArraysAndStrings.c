@@ -34,6 +34,22 @@ void ArrayFill(Array arr, char value) {
 	}
 }
 
+void Swap(char* first, char* second) {
+	char temp = *first;
+	*first = *second;
+	*second = temp;
+}
+
+void ArraySwap(Array first, Array second) {
+	if (first.length != second.length) {
+		return;
+	}
+	for (int i = 0; i < first.length; i++)
+	{
+		Swap(first.array + i, second.array + i);
+	}
+}
+
 int main()
 {
 	Array copySource = { 17, "Mamas 53 Empire!" };
@@ -50,4 +66,10 @@ int main()
 	Array fillArray = { 6, toFill };
 	ArrayFill(fillArray, '6');
 	printf("filled array: %s\n", toFill);
+
+	Array firstPart = { 8, compare.array };	
+	Array secondPart = { 8, compare.array+8 };
+	printf("original: %s ", compare.array);
+	ArraySwap(firstPart, secondPart);
+	printf("result: %s\n", compare.array);
 }
