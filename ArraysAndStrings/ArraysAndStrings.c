@@ -27,14 +27,27 @@ bool ArrayCompare(Array first, Array second) {
 	return true;
 }
 
+void ArrayFill(Array arr, char value) {
+	for (int i = 0; i < arr.length; i++)
+	{
+		arr.array[i] = value;
+	}
+}
+
 int main()
 {
 	Array copySource = { 17, "Mamas 53 Empire!" };
 	char copyDestination[17];
 	printf("Source: %s ", copySource.array);
-	ArrayCopy(copySource, copyDestination, 17);
+	ArrayCopy(copySource, copyDestination);
 	printf("Destination: %s\n", copyDestination);
 
 	Array compare = { 17, copyDestination };
-	printf("%s == %s ? %s", copySource.array, compare.array, ArrayCompare(copySource, compare) ? "true" : "false");
+	printf("%s == %s ? %s\n", copySource.array, compare.array, ArrayCompare(copySource, compare) ? "true" : "false");
+
+	char toFill[7];
+	toFill[6] = 0;
+	Array fillArray = { 6, toFill };
+	ArrayFill(fillArray, '6');
+	printf("filled array: %s\n", toFill);
 }
