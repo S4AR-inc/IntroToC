@@ -1,17 +1,25 @@
 #include <stdio.h>
 
-void ArrayCopy(char* src, char* dst, int length) {
-	for (int i = 0; i < length; i++)
+struct Array {
+	int length;
+	char* array;
+};
+typedef struct Array Array;
+
+void ArrayCopy(Array src, char* dst) {
+	for (int i = 0; i < src.length; i++)
 	{
-		dst[i] = src[i];
+		dst[i] = src.array[i];
 	}
 }
 
+
+
 int main()
 {
-	char* copySource = "Mamas 53 Empire!";
+	Array copySource = { 17, "Mamas 53 Empire!" };
 	char copyDestination[17];
-	printf("Source: %s ", copySource);
+	printf("Source: %s ", copySource.array);
 	ArrayCopy(copySource, copyDestination, 17);
 	printf("Destination: %s\n", copyDestination);
 }
